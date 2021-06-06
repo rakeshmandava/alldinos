@@ -81,10 +81,12 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "django_countries",
 ]
 
 LOCAL_APPS = [
     "alldinos.users.apps.UsersConfig",
+    "alldinos.dinos",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
