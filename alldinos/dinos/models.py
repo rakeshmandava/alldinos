@@ -5,12 +5,11 @@ from django_countries.fields import CountryField
 
 class Location(models.Model):
 
-    name = models.CharField("location name", max_length=100)
     
     def __str__(self):
-        return self.name
+        return str(self.name)
 
-    country = CountryField("Country of Origin", blank=True)
+    name = CountryField("Country of Origin", blank=True)
 
 class Dinosaur(models.Model):
     class Diet(models.TextChoices):
@@ -40,10 +39,10 @@ class Dinosaur(models.Model):
     #TODO - "add a choices option for species after scraping data"
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
     name = models.CharField("Name of Dinosaur", max_length=100)
-    slug = AutoSlugField("Cheese Address", unique=True, always_update=False, populate_from="name")
+    slug = AutoSlugField("Dinosaur Address", unique=True, always_update=False, populate_from="name")
     pronunciation = models.CharField("How to Pronounce the Name", max_length=120)
     length = models.IntegerField("Length of Dinosaur")
     image = models.ImageField(upload_to="upload/images/")
