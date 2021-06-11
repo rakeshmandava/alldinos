@@ -49,7 +49,7 @@ class Dinosaur(models.Model):
     period = models.CharField("Period of time when dinosaur lived", max_length=25, choices = Period.choices, default=Period.UNKNOWN)
     typeofdino = models.CharField("Type of Dinosaur", max_length=25, choices = Typeofdino.choices, default=Typeofdino.UNKNOWN)
     species = models.CharField("Species of Dinosaur", max_length=25)
-    locations = models.ManyToManyField(Location)
+    locations = models.ManyToManyField(Location, related_name="dinosaurs")
 
 
 
