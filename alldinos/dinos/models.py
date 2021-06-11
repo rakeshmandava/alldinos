@@ -45,9 +45,6 @@ class Dinosaur(models.Model):
     slug = AutoSlugField("Dinosaur Address", unique=True, always_update=False, populate_from="name")
     pronunciation = models.CharField("How to Pronounce the Name", max_length=120)
     length = models.IntegerField("Length of Dinosaur")
-    image = models.ImageField(upload_to="upload/images/")
-    scale = models.ImageField(upload_to="upload/images/")
-
     diet = models.CharField("Diet of the Dinosaur", max_length=25, choices=Diet.choices, default=Diet.UNKNOWN)
     period = models.CharField("Period of time when dinosaur lived", max_length=25, choices = Period.choices, default=Period.UNKNOWN)
     typeofdino = models.CharField("Type of Dinosaur", max_length=25, choices = Typeofdino.choices, default=Typeofdino.UNKNOWN)
