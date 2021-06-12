@@ -20,21 +20,21 @@ class Dinosaur(models.Model):
 
     class Period(models.TextChoices):
         UNKNOWN = "unknown", "UnKnown"
-        LT = "Late Triassic"
-        EJ = "Early Jurassic"
-        MJ = "Mid Jurassic"
-        LJ = "Late Jurassic"
-        EC = "Early Cretaceous"
-        LC = "Late Cretaceous"
+        LATE_TRIASSIC = "Late Triassic"
+        EARLY_JURASSIC = "Early Jurassic"
+        MID_JURASSIC = "Mid Jurassic"
+        LATE_JURASSIC = "Late Jurassic"
+        EARLY_CRETACEOUS = "Early Cretaceous"
+        LATE_CRETACEOUS = "Late Cretaceous"
 
     class Typeofdino(models.TextChoices):
         UNKNOWN = "unknown", "UnKnown"
-        AD = "Armoured dinosaurs"
-        C = "Ceratopsian"
-        E = "Euornithopod"
-        S = "Sauropod"
-        LT = "Large theropod"
-        ST = "Small theropod"
+        ARMOURED_DINOSAURS = "Armoured dinosaurs"
+        CERATOPSIAN = "Ceratopsian"
+        EUORNITHOPOD = "Euornithopod"
+        SAUROPOD = "Sauropod"
+        LARGE_THEROPOD = "Large theropod"
+        SMALL_THEROPOD = "Small theropod"
 
     #TODO - "add a choices option for species after scraping data"
 

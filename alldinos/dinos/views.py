@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from .models import Dinosaur
 
-# Create your views here.
+
+class DinosaurListView(ListView):
+    model = Dinosaur
+
+class DinosaurDetailView(DetailView):
+    model = Dinosaur

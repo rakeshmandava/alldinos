@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Dinosaur List{% endblock title %}
+{% block content %}
+  <h2>Dinosaur List</h2>
+
+<ul>
+    {% for dinosaur in dinosaur_list %}
+    <li><a href="{% url 'dinos:detail' dinosaur.slug %}">{{ dinosaur.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+
