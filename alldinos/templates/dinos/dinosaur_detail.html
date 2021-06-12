@@ -12,6 +12,9 @@
 <p>{{ dinosaur.period }}</p>
 <p>{{ dinosaur.typeofdino }}</p>
 <p>{{ dinosaur.species }}</p>
-<p>{{ dinosaur.locations }}</p>
+
+{% for location in dinosaur.locations.all %}
+  <li>{{ location }}</li>
+{% endfor %}
 
 {% endblock content %}
